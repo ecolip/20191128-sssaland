@@ -36,6 +36,9 @@ p {
   font-weight: 400;
   color: #677294;
 }
+.img-fluid {
+  width: 100%;
+}
 .info i {
   width: 50px;
   height: 50px;
@@ -55,7 +58,7 @@ p {
   color: #677294;
 }
 .intro {
-  padding: 40px 0 50px;
+  padding: 40px 15px 50px;
   text-align: center;
 }
 .intro .title {
@@ -90,6 +93,13 @@ p {
 .bg-oran {
   background-color: #E8AD22;
 }
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+  outline: none;
+}
+.navbar-collapse {
+  background-color: white;
+}
 nav {
   transition: background-color 0.2s linear;
 }
@@ -113,21 +123,20 @@ nav.navbar-expand-lg .navbar-nav .nav-link {
   padding: 13px 0.8rem;
 }
 nav.navbar-light .navbar-nav .nav-link {
-  color: white;
-}
-nav.navbar-light .navbar-nav .nav-link:hover {
-  color: white;
+  color: #3f4451;
 }
 nav.navbar-light .navbar-nav .nav-link.login {
   padding: 13px 40px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-right-radius: 25px;
+  border: 1px solid transparent;
   transition: all 0.3s linear;
 }
 nav.navbar-light .navbar-nav .nav-link.login:hover {
   background-color: white;
   color: #00AFF0;
+  border: 1px solid #00AFF0;
 }
 nav.navbar-light .navbar-nav .nav-link.sign {
   padding: 13px 32px;
@@ -136,10 +145,17 @@ nav.navbar-light .navbar-nav .nav-link.sign {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border-top-right-radius: 25px;
-  border: 1px solid white;
+  border: 1px solid transparent;
+}
+nav.navbar-light .navbar-nav .nav-link.sign:hover {
+  color: #00AFF0;
 }
 nav.navbar-light .navbar-nav .nav-link.sign.bordered {
   border: 1px solid #00AFF0;
+}
+nav.navbar-light .navbar-nav .nav-link.sign.active {
+  background-color: #00AFF0;
+  color: white;
 }
 nav .dropdown-menu {
   min-width: 13rem;
@@ -234,9 +250,6 @@ nav .dropdown-menu.pages .fzfs {
 }
 nav .dropdown-menu.homes .thumbnail {
   position: relative;
-}
-nav .dropdown-menu.homes .thumbnail img {
-  width: 100%;
 }
 nav .dropdown-menu.homes .thumbnail .cover {
   position: absolute;
@@ -428,7 +441,7 @@ nav .dropdown-menu.homes a:hover {
 }
 .devices img.mac {
   top: 15%;
-  right: -5%;
+  right: 0%;
 }
 .devices img.iphone {
   bottom: 0;
@@ -525,6 +538,15 @@ nav .dropdown-menu.homes a:hover {
   }
 }
 @media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    background-color: transparent;
+  }
+  nav.navbar-light .navbar-nav .nav-link {
+    color: #3f4451;
+  }
+  nav.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+  }
   .team .billed ul {
     padding: 6px;
     border-radius: 25px;
