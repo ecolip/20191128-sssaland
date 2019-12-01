@@ -157,6 +157,13 @@ nav.navbar-light .navbar-nav .nav-link.sign.active {
   background-color: #00AFF0;
   color: white;
 }
+nav .navbar-nav {
+  overflow: auto;
+  height: 100vh;
+}
+nav .nav-link {
+  display: inline-block;
+}
 nav .dropdown-menu {
   min-width: 13rem;
   margin: 0;
@@ -247,6 +254,10 @@ nav .dropdown-menu.pages .contacts {
 }
 nav .dropdown-menu.pages .fzfs {
   top: 85%;
+}
+nav .dropdown-menu.homes {
+  overflow: auto;
+  height: 50vh;
 }
 nav .dropdown-menu.homes .thumbnail {
   position: relative;
@@ -541,11 +552,18 @@ nav .dropdown-menu.homes a:hover {
   .navbar-expand-lg .navbar-collapse {
     background-color: transparent;
   }
-  nav.navbar-light .navbar-nav .nav-link {
+  nav .navbar-light .navbar-nav .nav-link {
     color: #3f4451;
   }
-  nav.navbar-light .navbar-nav .nav-link:hover {
+  nav .navbar-light .navbar-nav .nav-link:hover {
     color: white;
+  }
+  nav .navbar-nav {
+    overflow: initial;
+    height: 80px;
+  }
+  nav .dropdown-menu.homes {
+    height: 100vh;
   }
   .team .billed ul {
     padding: 6px;
