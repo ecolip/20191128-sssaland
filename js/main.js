@@ -4,15 +4,6 @@ $(document).ready(function(){
 		var scrollTop = $(this).scrollTop();
 			//console.log(scrollTop);
 		
-		if (scrollTop > 3277){
-			$('.devices img').addClass('move');
-			$('.devices').addClass('bg-move');
-		}
-		else{
-			$('.devices img').removeClass('move');
-			$('.devices').removeClass('bg-move');
-		}
-
 		if (scrollTop >1){
 			$('nav').addClass('bgc-white');
 			$('.sign').addClass('bordered');      
@@ -22,6 +13,15 @@ $(document).ready(function(){
 			$('.sign').removeClass('bordered');
 		}
 
+		if (scrollTop > 3277){
+			$('.devices img').addClass('move');
+			$('.devices').addClass('bg-move');
+		}
+		else{
+			$('.devices img').removeClass('move');
+			$('.devices').removeClass('bg-move');
+		}
+		
 	});
 
 	$('.li-1').hover(function(e){
